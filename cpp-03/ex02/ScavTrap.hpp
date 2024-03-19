@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 14:01:06 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/19 13:34:53 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/19 12:31:03 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define SCAVTRAP_HPP
 
 # include "ClapTrap.hpp"
-# include <string>
 
 class ScavTrap : public ClapTrap {
     private:
