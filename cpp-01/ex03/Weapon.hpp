@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 16:17:55 by arazzok           #+#    #+#             */
-/*   Updated: 2024/02/28 16:59:54 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/02/29 14:15:27 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Weapon {
     public:
         Weapon(std::string type);
         ~Weapon(void);
+
         const std::string&  getType(void);
         void                setType(std::string type);
 };
