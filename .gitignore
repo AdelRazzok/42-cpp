@@ -11,7 +11,6 @@
 # Executables
 *.out
 *.exe
-megaphone
 
 # Temp files
 *.swp
