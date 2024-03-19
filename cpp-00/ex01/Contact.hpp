@@ -6,14 +6,14 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 21:20:46 by arazzok           #+#    #+#             */
-/*   Updated: 2024/02/21 16:26:44 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/02/22 18:14:43 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_H
 # define CONTACT_H
 
-# include <locale>
+# include <string>
 
 class Contact {
     private:
