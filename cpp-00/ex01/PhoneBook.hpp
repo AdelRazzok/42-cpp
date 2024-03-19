@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 21:00:07 by arazzok           #+#    #+#             */
-/*   Updated: 2024/02/21 17:02:35 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/02/22 17:26:31 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include "Contact.hpp"
 # include <iostream>
+# include <sstream>
+# include <iomanip>
+# include <string>
 
 class PhoneBook {
     private:
@@ -23,8 +26,10 @@ class PhoneBook {
         PhoneBook(void);
         ~PhoneBook(void);
 
-        void add(int index);
+        bool add(int index);
         void search(void);
+        void print_all_contacts(void);
+        void print_one_contact(int index);
 };
 
 #endif
