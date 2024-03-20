@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 14:54:05 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/20 15:03:57 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/20 16:17:16 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ MateriaSource::~MateriaSource()
     }
 }
 
-MateriaSource &MateriaSource::operator=(const MateriaSource &other)
+MateriaSource   &MateriaSource::operator=(const MateriaSource &other)
 {
     std::cout << "MateriaSource assignation operator called" << std::endl;
     if (this != &other)
@@ -50,12 +50,21 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &other)
     return *this;
 }
 
-void MateriaSource::learnMateria(AMateria *m)
+void            MateriaSource::learnMateria(AMateria *m)
 {
-    
+    int i = 0;
+
+    while (i < 4 && materias[i] != 0)
+        i++;
+    if (i >= 4 || !(this->materias)[i])
+    {
+        std::cout << "Cannot learn more than 4 materias" << std::endl;
+        return;
+    }
+    std::cout << "Materia " << m->getType() << " learned" << std::endl;
 }
 
-AMateria *MateriaSource::createMateria(std::string const &type)
+AMateria        *MateriaSource::createMateria(std::string const &type)
 {
-
+    
 }
