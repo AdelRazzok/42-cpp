@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 14:12:09 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/19 16:58:32 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/20 12:16:56 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,9 @@ void        Cat::makeSound() const
 {
     std::cout << "Meow meow!" << std::endl;
     return;
+}
+
+Brain       *Cat::getBrain() const
+{
+    return this->brain;
 }

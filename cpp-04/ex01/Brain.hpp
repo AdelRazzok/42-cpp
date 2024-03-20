@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:34:49 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/19 16:37:32 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/20 12:19:24 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ class Brain
         ~Brain();
 
         Brain &operator=(const Brain &other);
+
+        std::string *getIdeas();
 };

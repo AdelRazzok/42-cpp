@@ -6,7 +6,7 @@ OBJ_DIR       = obj/
 CXX           = c++
 CXXFLAGS      = -Wall -Wextra -Werror -std=c++98
 
-SRC_FILES     = main Animal Cat Dog WrongAnimal WrongCat Brain
+SRC_FILES     = main Animal Cat Dog Brain
 
 SRC           = $(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ           = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))

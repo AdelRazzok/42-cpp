@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 14:13:21 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/19 16:12:40 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/20 12:18:21 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int main()
         cat->makeSound();
         dog->makeSound();
         animal->makeSound();
-
         delete animal;
         delete cat;
         delete dog;
@@ -41,10 +40,8 @@ int main()
         std::cout << cat->getType() << std::endl;
         cat->makeSound();
         animal->makeSound();
-
         delete animal;
         delete cat;
     }
-
     return 0;
 }
