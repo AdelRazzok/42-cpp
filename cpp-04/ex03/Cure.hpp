@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 13:43:49 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/20 14:58:26 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/21 12:55:56 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ class Cure : public AMateria
 
         Cure &operator=(const Cure &other);
 
-        virtual AMateria *clone() const;
+        virtual AMateria    *clone() const;
+        virtual void        use(ICharacter &target);
 };

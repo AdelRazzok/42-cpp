@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 14:36:49 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/20 14:47:58 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/21 13:44:33 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@ Character &Character::operator=(const Character &other)
     std::cout << "Character assignation operator called" << std::endl;
     if (this != &other)
     {
-        this->name = other.name;
         for (int i = 0; i < 4; i++)
         {
             if (this->inventory[i])
                 delete this->inventory[i];
-            this->inventory[i] = other.inventory[i];
+            if (other.inventory[i])
+                this->inventory[i] = other.inventory[i]->clone();
         }
     }
     return *this;
@@ -69,28 +69,58 @@ const std::string &Character::getName() const
 
 void Character::equip(AMateria *m)
 {
-    for (int i = 0; i < 4; i++)
+    if (!m)
     {
-        if (!this->inventory[i])
-        {
-            this->inventory[i] = m;
-            break;
-        }
+        std::cout << "Cannot equip NULL materia" << std::endl;
+        return;
     }
+
+    int i = 0;
+    while (i < 4 && this->inventory[i] != 0)
+        i++;
+
+    if (i >= 4)
+    {
+        std::cout << this->name << "'s inventory is full" << std::endl;
+        return;
+    }
+    this->inventory[i] = m;
+    std::cout << this->name << " equipped " << m->getType() << " materia" << std::endl;
     return;
 }
 
 void Character::unequip(int idx)
 {
-    // ! Possible leak here !
-    if (idx >= 0 && idx < 4)
-        this->inventory[idx] = 0;
+    if (idx < 0 || idx >= 4)
+    {
+        std::cout << "Invalid index" << std::endl;
+        return;
+    }
+
+    if (!this->inventory[idx])
+    {
+        std::cout << this->name << " has no materia at index " << idx << std::endl;
+        return;
+    }
+    std::cout << this->name << " unequipped ";
+    std::cout << this->inventory[idx]->getType() << " materia" << std::endl;
+    this->inventory[idx] = 0;
     return;
 }
 
 void Character::use(int idx, ICharacter &target)
 {
-    if (idx >= 0 && idx < 4 && this->inventory[idx])
-        this->inventory[idx]->use(target);
+    if (idx < 0 || idx >= 4)
+    {
+        std::cout << "Invalid index" << std::endl;
+        return;
+    }
+
+    if (!this->inventory[idx])
+    {
+        std::cout << this->name << " has no materia at index " << idx << std::endl;
+        return;
+    }
+    this->inventory[idx]->use(target);
     return;
 }
