@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 13:30:41 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/20 14:34:26 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/21 13:50:01 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 #include "ICharacter.hpp"
 #include <iostream>
+
+class ICharacter;
 
 class AMateria
 {

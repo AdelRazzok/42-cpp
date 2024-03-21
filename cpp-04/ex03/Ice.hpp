@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 13:38:05 by arazzok           #+#    #+#             */
-/*   Updated: 2024/03/20 13:40:21 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/03/21 12:58:47 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ class Ice : public AMateria
 
         Ice &operator=(const Ice &other);
 
-        virtual AMateria *clone() const;
+        virtual AMateria    *clone() const;
+        virtual void        use(ICharacter &target);
 };
