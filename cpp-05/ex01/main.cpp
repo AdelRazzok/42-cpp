@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 14:49:13 by arazzok           #+#    #+#             */
-/*   Updated: 2024/05/16 17:38:31 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/05/16 17:40:11 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int main(void)
     john.signForm(b12);
     marcelus.signForm(b12);
 
-    std::cout << std::endl;    
+    std::cout << std::endl;
     std::cout << b12 << std::endl;
 
-    return 0; 
+    return 0;
 }
