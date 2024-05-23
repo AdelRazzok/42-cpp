@@ -6,7 +6,7 @@
 /*   By: arazzok <arazzok@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 13:12:22 by arazzok           #+#    #+#             */
-/*   Updated: 2024/05/23 13:00:27 by arazzok          ###   ########.fr       */
+/*   Updated: 2024/05/23 15:40:33 by arazzok          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ class Bureaucrat
         void                incrementGrade();
         void                decrementGrade();
         void                signForm(AForm &form) const;
+        void                executeForm(const AForm &form) const;
 };
 
 std::ostream    &operator<<(std::ostream &os, const Bureaucrat &obj);
