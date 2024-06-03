@@ -24,8 +24,8 @@ class AForm
         bool                _isSigned;
         const int           _reqGradeToSign;
         const int           _reqGradeToExecute;
-    public:
         AForm();
+    public:
         AForm(const std::string name, const int reqGradeToSign, const int reqGradeToExecute);
         AForm(const AForm &other);
         virtual ~AForm();
